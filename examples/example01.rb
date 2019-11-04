@@ -1,5 +1,3 @@
-require "./lib/pampa/parser"
-
 parser = nil
 
 print "Parse command line... "
