@@ -1,4 +1,4 @@
-require "./lib/pampa/parser"
+require "simple_command_line_parser"
 
 parser = nil
 
