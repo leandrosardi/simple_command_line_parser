@@ -21,6 +21,7 @@ Here are some tests about how to use this gem properly, and how to avoid some co
 The command line parser & validation will be done in the same moment when you create the parser object.
 
 ```
+<<<<<<< HEAD
 require "simple_command_line_parser"
 
 parser = nil
@@ -158,6 +159,19 @@ C:\source>ruby example.rb url=foo.com max_retries=2 check_for_virus=maybe
 Parse command line... error
 Type mismatch for the command line parameter check_for_virus.
 ```
+=======
+Give an example
+```
+
+### Mandatory configurations
+
+### Default value 
+
+### Avoid missed parameters in the command line
+
+### Avoid mismatch types in the command line
+
+>>>>>>> b8da9dc35646a90e95631793af28171cd3861a63
 
 ## List of error messages
 
