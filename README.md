@@ -1,6 +1,8 @@
 # Simple Command Line Parser
 
-Easy library to validate and parse command line parameters. This gem has been designed as a part of the BlackStack framework.
+Easy library to validate and parse command line parameters. 
+
+This gem has been designed as a part of the **BlackStack** framework.
 
 I ran tests in Windows environments only.
 
@@ -20,8 +22,7 @@ Here are some tests about how to use this gem properly, and how to avoid some co
 
 The command line parser & validation will be done in the same moment when you create the parser object.
 
-```
-<<<<<<< HEAD
+```ruby
 require "simple_command_line_parser"
 
 parser = nil
@@ -76,7 +77,7 @@ Bye!
 
 ### Avoid missed parameters in the command line
 
-Using the same code in the previous sections, it will raise an exception if one of the parameters is missed in the command line.
+Using the same code than the previous sections, will raise an exception if one of the parameters is missed in the command line.
 
 ```
 C:\source>ruby example.rb url=foo.com max_retries=2
@@ -88,7 +89,7 @@ Command line parameter check_for_virus expected.
 
 You can make some parameters not mandatory (optional), but you have to setup a default value for them.
 
-```
+```ruby
 require "simple_command_line_parser"
 
 parser = nil
@@ -159,46 +160,15 @@ C:\source>ruby example.rb url=foo.com max_retries=2 check_for_virus=maybe
 Parse command line... error
 Type mismatch for the command line parameter check_for_virus.
 ```
-=======
-Give an example
-```
-
-### Mandatory configurations
-
-### Default value 
-
-### Avoid missed parameters in the command line
-
-### Avoid mismatch types in the command line
-
->>>>>>> b8da9dc35646a90e95631793af28171cd3861a63
-
-## List of error messages
-
-This is the list of possible error messages that you may receive when you create a new object.
-
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the last [ruby gem](https://rubygems.org/gems/simple_command_line_parser). 
 
 ## Authors
 
-* **Leandro Daniel Sardi** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Leandro Daniel Sardi** - *Initial work* - [LeandroSardi](https://github.com/leandrosardi)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
