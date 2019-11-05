@@ -23,30 +23,30 @@ Here are some tests about how to use this gem properly, and how to avoid some co
 The command line parser & validation will be done in the same moment when you create the parser object.
 
 ```ruby
-require "simple_command_line_parser"
+require 'simple_command_line_parser'
 
 parser = nil
 
 print "Parse command line... "
 begin
   parser = BlackStack::SimpleCommandLineParser.new(
-    :description => "This example command would downolad and install a software.", 
+    :description => 'This example command would downolad and install a software.', 
     :configuration => [{
         :name=>'url', 
         :mandatory=>true, 
-        :description=>"URL from where download the installer.", 
+        :description=>'URL from where download the installer.', 
         :type=>BlackStack::SimpleCommandLineParser::STRING,
       },
       {
         :name=>'max_retries', 
         :mandatory=>true, 
-        :description=>"Max number of download retries if the download keep failing.", 
+        :description=>'Max number of download retries if the download keep failing.', 
         :type=>BlackStack::SimpleCommandLineParser::INT,
       },
       {
         :name=>'check_for_virus', 
         :mandatory=>true, 
-        :description=>"Run verifications when login", 
+        :description=>'Run verifications when login.', 
         :type=>BlackStack::SimpleCommandLineParser::BOOL,
       },
     ]
@@ -97,23 +97,23 @@ parser = nil
 print "Parse command line... "
 begin
   parser = BlackStack::SimpleCommandLineParser.new(
-    :description => "This example command would downolad and install a software.", 
+    :description => 'This example command would downolad and install a software.', 
     :configuration => [{
         :name=>'url', 
         :mandatory=>true, 
-        :description=>"URL from where download the installer.", 
+        :description=>'URL from where download the installer.', 
         :type=>BlackStack::SimpleCommandLineParser::STRING,
       },
       {
         :name=>'max_retries', 
         :mandatory=>true, 
-        :description=>"Max number of download retries if the download keep failing.", 
+        :description=>'Max number of download retries if the download keep failing.', 
         :type=>BlackStack::SimpleCommandLineParser::INT,
       },
       {
         :name=>'check_for_virus', 
         :mandatory=>false, 
-        :description=>"Run verifications when login", 
+        :description=>'Run verifications when login.', 
         :type=>BlackStack::SimpleCommandLineParser::BOOL,
         :default=>false
       },
