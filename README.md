@@ -85,12 +85,12 @@ Parse command line... error
 Command line parameter check_for_virus expected.
 ```
 
-### Optional parameters & Default Values
+### Optional parameters & default values
 
 You can make some parameters not mandatory (optional), but you have to setup a default value for them.
 
 ```ruby
-require "simple_command_line_parser"
+require 'simple_command_line_parser'
 
 parser = nil
 
