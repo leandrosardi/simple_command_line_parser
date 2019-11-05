@@ -155,7 +155,7 @@ module BlackStack
     def value(k)
       h = self.args[k] 
       i = self.conf.select {|j| j[:name]==k}.first 
-      raise "Unknown name of paraeter." if i.nil?
+      raise "Unknown name of parameter." if i.nil?
       if !h.nil?
         return h.to_s if i[:type] == BlackStack::SimpleCommandLineParser::STRING 
         return h.to_i if i[:type] == BlackStack::SimpleCommandLineParser::INT 
