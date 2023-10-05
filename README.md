@@ -88,6 +88,9 @@ Try running the script:
 
 ```
 ruby ~/example.rb url=foo.com max_retries=2 check_for_virus=yes
+```
+
+```
 Parse command line... done
 
 Param url == foo.com
@@ -103,6 +106,9 @@ Using the same code than the previous sections, will raise an exception if one o
 
 ```
 ruby ~/example.rb url=foo.com max_retries=2
+```
+
+```
 Parse command line... error
 Command line parameter check_for_virus expected.
 ```
@@ -156,6 +162,9 @@ end
 
 ```
 ruby ~/example.rb url=foo.com max_retries=2
+```
+
+```
 Parse command line... done
 
 Param url == foo.com
@@ -171,6 +180,9 @@ If you declare a parameters as an integer, you can't send other value than an in
 
 ```
 ruby ~/example.rb url=foo.com max_retries=not-an-integer
+```
+
+```
 Parse command line... error
 Type mismatch for the command line parameter max_retries.
 ```
@@ -179,6 +191,9 @@ If you declare a parameter as a boolean, you can'tsend other value than 'yes' or
 
 ```
 ruby ~/example.rb url=foo.com max_retries=2 check_for_virus=maybe
+```
+
+```
 Parse command line... error
 Type mismatch for the command line parameter check_for_virus.
 ```
