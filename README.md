@@ -4,23 +4,40 @@ Easy library to validate and parse command line parameters.
 
 This gem has been designed as a part of the **BlackStack** framework.
 
-I ran tests in Windows environments only.
+I ran tests on:
+
+- Ubuntu 18.04,
+- Ubuntu 20.04,
+and
+- Windows 7 only.
 
 Email to me if you want to collaborate, by testing this library in any Linux platform.
 
-### Installing
+**Outline**
+
+1. [Installation](#1-installation)
+2. [Getting Started](#2-getting-started)
+3. [Missing Parameters](#3-missing-parameters)
+4. [Optional Parameters](#4-optional-parameters)
+5. [Type Mismatching](#5-type-mismatching)
+
+## 1. Installation
 
 ```
 gem install simple_command_line_parser
 ```
 
-## Running the tests
-
-Here are some tests about how to use this gem properly, and how to avoid some common mistakes.
-
-### Specify the list of parameters
+## 2. Getting Started
 
 The command line parser & validation will be done in the same moment when you create the parser object.
+
+As an example, create the a new file,
+
+```
+touch ~/example.rb
+```
+
+And write this script there:
 
 ```ruby
 require 'simple_command_line_parser'
@@ -57,6 +74,9 @@ begin
   puts "Param max_retries == #{parser.value('max_retries').to_s}"
   puts "Param check_for_virus == #{parser.value('check_for_virus').to_s}"
   puts ""
+
+  # TODO: Code your process here.
+
   puts "Bye!"
 rescue => e
   puts "error"
@@ -64,8 +84,10 @@ rescue => e
 end
 ```
 
+Try running the script:
+
 ```
-C:\source>ruby example.rb url=foo.com max_retries=2 check_for_virus=yes
+ruby ~/example.rb url=foo.com max_retries=2 check_for_virus=yes
 Parse command line... done
 
 Param url == foo.com
@@ -75,17 +97,17 @@ Param check_for_virus == true
 Bye!
 ```
 
-### Avoid missed parameters in the command line
+## 3. Missing Parameters
 
 Using the same code than the previous sections, will raise an exception if one of the parameters is missed in the command line.
 
 ```
-C:\source>ruby example.rb url=foo.com max_retries=2
+ruby ~/example.rb url=foo.com max_retries=2
 Parse command line... error
 Command line parameter check_for_virus expected.
 ```
 
-### Optional parameters & default values
+## 4. Optional Parameters
 
 You can make some parameters not mandatory (optional), but you have to setup a default value for them.
 
@@ -112,7 +134,7 @@ begin
       },
       {
         :name=>'check_for_virus', 
-        :mandatory=>false, 
+        :mandatory=>false, # <==== OPTIONAL PARAMETER
         :description=>'Run verifications when login.', 
         :type=>BlackStack::SimpleCommandLineParser::BOOL,
         :default=>false
@@ -133,7 +155,7 @@ end
 ```
 
 ```
-C:\source>ruby example.rb url=foo.com max_retries=2
+ruby ~/example.rb url=foo.com max_retries=2
 Parse command line... done
 
 Param url == foo.com
@@ -143,7 +165,7 @@ Param check_for_virus == false
 Bye!
 ```
 
-### Avoid mismatch types in the command line
+## 5. Type Mismatching
 
 If you declare a parameters as an integer, you can't send other value than an integer in the command line.
 
