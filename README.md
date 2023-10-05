@@ -170,7 +170,7 @@ Bye!
 If you declare a parameters as an integer, you can't send other value than an integer in the command line.
 
 ```
-C:\source>ruby example.rb url=foo.com max_retries=not-an-integer
+ruby ~/example.rb url=foo.com max_retries=not-an-integer
 Parse command line... error
 Type mismatch for the command line parameter max_retries.
 ```
@@ -178,7 +178,7 @@ Type mismatch for the command line parameter max_retries.
 If you declare a parameter as a boolean, you can'tsend other value than 'yes' or 'no' in the command line
 
 ```
-C:\source>ruby example.rb url=foo.com max_retries=2 check_for_virus=maybe
+ruby ~/example.rb url=foo.com max_retries=2 check_for_virus=maybe
 Parse command line... error
 Type mismatch for the command line parameter check_for_virus.
 ```
