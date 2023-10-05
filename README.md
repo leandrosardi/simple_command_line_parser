@@ -11,7 +11,7 @@ I ran tests on:
 and
 - Windows 7 only.
 
-Email to me if you want to collaborate, by testing this library in any Linux platform.
+Email to me if you want to collaborate.
 
 **Outline**
 
